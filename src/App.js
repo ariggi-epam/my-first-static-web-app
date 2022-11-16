@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      var text  = await (await fetch(`/api/message`)).json();
+      var text  = await (await fetch(`/api/albums`)).json();
       console.log(text)
       setData(text.message);
       
