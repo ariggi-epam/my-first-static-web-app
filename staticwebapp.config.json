@@ -20,6 +20,9 @@
             }
         }
     },
+    "globalHeaders": {
+        "Cache-Control": "no-cache"
+    },
     "routes": [
         {
             "route": "/api/albums*",
@@ -32,6 +35,11 @@
         {
             "route": "/api/testdeploy*",
             "allowedRoles": ["editor"]
+        }
+        ,
+        {
+            "route": "*",
+            "allowedRoles": ["authenticated"]
         }
         
 
