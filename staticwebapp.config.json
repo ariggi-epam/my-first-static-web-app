@@ -3,6 +3,7 @@
         "rewrite": "/index.html"
     },
     "auth": {
+        "rolesSource": "/api/GetRoles",
         "identityProviders": {
             "azureActiveDirectory": {
                 "registration": {
@@ -15,9 +16,22 @@
     },
     "routes": [
         {
+            "route": "/api/albums*",
+            "allowedRoles": ["admin"]
+        },
+        {
+            "route": "/api/alberto*",
+            "allowedRoles": ["reader"]
+        },
+        {
+            "route": "/api/testdeploy*",
+            "allowedRoles": ["editor"]
+        },
+        {
           "route": "/*",
           "allowedRoles": ["authenticated"]
         }
+
       ],
       "responseOverrides": {
         "401": {
