@@ -3,7 +3,7 @@
         "rewrite": "/index.html"
     },
     "auth": {
-        "rolesSource": "/api/UserRoles",
+        "rolesSource": "/api/getroles",
         "identityProviders": {
           "azureActiveDirectory": {
             "registration": {
