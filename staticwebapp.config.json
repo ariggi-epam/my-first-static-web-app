@@ -26,11 +26,6 @@
     },
     "routes": [
         {
-            "route": "/login",
-            "rewrite": "/.auth/login/aad",
-            "allowedRoles": ["anonymous", "authenticated"]
-          },
-        {
             "route": "/api/albums*",
             "allowedRoles": ["admin"]
         },
