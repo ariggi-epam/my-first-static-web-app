@@ -25,6 +25,11 @@
     },
     "routes": [
         {
+            "route": "/login",
+            "rewrite": "/.auth/login/aad",
+            "allowedRoles": ["anonymous", "authenticated"]
+          },
+        {
             "route": "/api/albums*",
             "allowedRoles": ["admin"]
         },
@@ -35,8 +40,12 @@
         {
             "route": "/api/testdeploy*",
             "allowedRoles": ["editor"]
-        }
-        ,
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout",
+            "allowedRoles": ["anonymous", "authenticated"]
+        },
         {
             "route": "*",
             "allowedRoles": ["authenticated"]
