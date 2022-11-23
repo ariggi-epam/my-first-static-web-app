@@ -23,8 +23,7 @@
     },
     "routes": [
         {
-            "route": "/api/albums*",
-            "allowedRoles": ["admin"]
+            "route": "/api/albums*"
         },
         {
             "route": "/api/alberto*",
